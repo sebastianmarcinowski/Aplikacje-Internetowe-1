@@ -1,0 +1,152 @@
+/* Styl ogólny */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Formularz wyszukiwania */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+#search_task {
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Kontener na listę zadań */
+#container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Styl elementów zadania */
+.task_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.task_content {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.date_label {
+    font-size: 14px;
+    color: #777;
+    margin-right: 200px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Przycisk Delete */
+.del_button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.del_button:hover {
+    background-color: #c82333;
+}
+
+/* Sekcja dodawania nowego zadania */
+.add_task_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#add_task, #new_task_date {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add_task {
+    flex-grow: 1;
+}
+
+#new_task_date {
+    max-width: 120px;
+}
+
+button[type="button"] {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/*Dodanie efektów przy wyszukiwaniu elementów*/
+.highlight {
+    background-color: #a7dfa7;
+    font-weight: bold;
+}
+
+/* Styl dla trybu edycji */
+.expand-animation {
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    width: 100%;
+    height: 50px;
+}
+.shrink-animation {
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    width: auto;
+    height: auto;
+}
+.edit_spacing {
+    margin-right: 10px;
+}
+.edit_button {
+    background-color: #25e30f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 15px;
+}

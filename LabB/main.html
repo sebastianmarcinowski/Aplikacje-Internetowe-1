@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<script src="script.js"></script>
+<form>
+    <input type="text" id="search_task" placeholder="Search" oninput="Search()"><br>
+</form>
+<div id="container">
+    <!--<p class="task_container">
+        <input type="checkbox" id="task1">
+        <label class="task_content">Task 1</label>
+        <label class="date_label"></label>
+        <button class="del_button">Delete</button>
+    </p>-->
+</div>
+<div class="add_task_section">
+    <input type="text" id="add_task">
+    <input type="date" id="new_task_date" onclick="dateSetup()">
+    <button type="button" onclick="addFunction()">Add</button>
+</div>
+</body>
+</html>
