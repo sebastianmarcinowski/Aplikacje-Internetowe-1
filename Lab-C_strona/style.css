@@ -1,0 +1,113 @@
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+#mainContainer {
+    width: 90%;
+    max-width: 1600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#localization, #puzzleView, #puzzles, #puzzleBoard {
+    width: 100%;
+    height: 100%;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    border: 2px solid #000000;
+    font-size: 1em;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#localization{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Ctext x='50%' y='50%' font-size='50' dominant-baseline='middle' text-anchor='middle' fill='%33cccccc' opacity='0.3'%3ELeaflet Map%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#puzzleView{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Ctext x='50%' y='50%' font-size='50' dominant-baseline='middle' text-anchor='middle' fill='%33cccccc' opacity='0.3'%3EPosition screenshot%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#puzzles{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Ctext x='50%' y='50%' font-size='50' dominant-baseline='middle' text-anchor='middle' fill='%33cccccc' opacity='0.3'%3EShuffled Puzzles%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#puzzleBoard{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Ctext x='50%' y='50%' font-size='50' dominant-baseline='middle' text-anchor='middle' fill='%33cccccc' opacity='0.3'%3ESolved Puzzles%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a 4-column layout */
+    grid-template-rows: repeat(4, 1fr);    /* Creates 4 rows */
+    gap: 2px; /* Adds spacing between slots */
+    width: 100%; /* Ensures the puzzle board fills its parent */
+    height: 100%; /* Ensures the puzzle board fills its parent */
+    background-color: #e9ecef;
+    border-radius: 8px;
+    border: 2px solid #000000;
+}
+
+
+#puzzles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a 4-column layout */
+    grid-template-rows: repeat(4, 1fr);    /* Creates 4 rows */
+    gap: 0; /* Removes spacing between pieces */
+    width: 100%; /* Ensures the puzzles container fills its parent */
+    height: 100%; /* Ensures the puzzles container fills its parent */
+}
+
+.draggable {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    cursor: move;
+    box-sizing: border-box;
+}
+
+/* Style for the slots */
+.slot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #7f7fe9;
+    box-sizing: border-box;
+}
+
+/* Style for a slot when a piece is correctly placed */
+.slot.correct {
+    border: 2px solid green;
+}
+
+/* Style for a slot when a piece is incorrectly placed */
+.slot.incorrect {
+    border: 2px solid red;
+}
