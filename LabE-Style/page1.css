@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('pierogi-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1em;
+}
+
+#logo{
+    width: 250px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    text-align: center;
+    font-family: "JetBrains Mono Medium";
+    font-size: 30px;
+    background-color: #6c3c0c;
+    color: White;
+    padding: 1em 4em;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    width: 60%;
+    background-color: white;
+    padding: 2em;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+footer {
+    width: 70%;
+    text-align: center;
+    background-color: #6c3c0c;
+    color: white;
+    padding: 1em 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+
+h1 {
+    font-family: 'JetBrains Mono Medium', monospace;
+    font-size: 48px;
+    color: #d4a373;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, rgba(255, 217, 179, 1) 0%, rgba(255, 183, 94, 1) 50%, rgba(255, 159, 28, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px 0;
+    border-bottom: 4px solid #6c3c0c;
+}
+
+
+h2, h3 {
+    margin-top: 0;
+}
+
+/*
+img {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+*/
+
+button{
+    background-color: #4A5EE3FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Styl dla tabletów (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header, .content, footer {
+        width: 70%;
+    }
+
+    #logo {
+        width: 220px;
+    }
+
+    header {
+        font-size: 28px;
+        padding: 1em 3em;
+    }
+
+    .content {
+        padding: 1.8em;
+        font-size: 20px;
+    }
+
+    footer {
+        width: 80%;
+        padding: 1.2em 0;
+        font-size: 28px;
+    }
+}
+
+/* Styl dla mniejszych tabletów (max-width: 768px) */
+@media (max-width: 768px) {
+    header, .content, footer {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    #logo {
+        width: 200px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    footer{
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 1.5em;
+    }
+}
+
+/* Styl dla urządzeń mobilnych (max-width: 480px) */
+@media (max-width: 480px) {
+    header, .content, footer {
+        width: 90%;
+        padding: 1em;
+    }
+
+    header {
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 1em;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 1em;
+        font-size: 18px;
+    }
+}
