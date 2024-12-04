@@ -28,6 +28,12 @@ function addStyle(name, path) {
   });
   (_a = document.querySelector("footer")) === null || _a === void 0 ? void 0 : _a.appendChild(button);
 }
+function applyStylesheet(url) {
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = url;
+  document.head.appendChild(link);
+}
 document.addEventListener("DOMContentLoaded", function () {
   var footer = document.querySelector("footer");
   if (footer) {
@@ -37,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addStyle(style, styles.get(style) || "");
     });
   }
+  applyStylesheet("LabE-Style/page1.css");
 });
 /******/ })()
 ;

@@ -28,6 +28,13 @@ function addStyle(name: string, path: string): void {
     document.querySelector("footer")?.appendChild(button);
 }
 
+function applyStylesheet(url: string): void {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = url;
+    document.head.appendChild(link);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const footer = document.querySelector("footer");
     if (footer) {
@@ -37,4 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
            addStyle(style, styles.get(style) || "");
         });
     }
+    applyStylesheet("LabE-Style/page1.css");
 });
